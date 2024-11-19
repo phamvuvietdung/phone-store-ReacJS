@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { IoMdListBox } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -12,12 +12,32 @@ import { FaRegUserCircle } from "react-icons/fa";
 import "../../styles/home/header.css"
 
 function Header() {
+
+  // Dùng useState để lấy chiều rộng của màn hình
+  // Dùng chiều rộng của màn hình để dùng hiển thị các thành phần của header
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  // console.log(windowWidth)
+
   return (
     <div className='header-bgcolor'>
       <div className='header-container'>
         <div className='header-logo'>
-          <img src="https://res.cloudinary.com/dgxmejzk6/image/upload/v1731597116/logo-cellphones_tnfdzh.jpg" 
-          alt="logo-cellphones" />
+
+          {
+            windowWidth > 820 ? <img src="https://res.cloudinary.com/dgxmejzk6/image/upload/v1731597116/logo-cellphones_tnfdzh.jpg" 
+            alt="logo-cellphones" />
+            : <img src="https://res.cloudinary.com/dgxmejzk6/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1731596568/cellphones-social-preview_w8clck.png" 
+            alt="logo-cellphones" />
+          }
+
         </div>
 
         <div className='header-listBox'>
@@ -44,19 +64,31 @@ function Header() {
         <div className='header-phone'> 
           <FiPhone />
           <div>
-            <p>Gọi mua hàng</p>
-            <p>1800.2097</p>
+            
+            {
+              windowWidth > 1100? <p>Gọi mua hàng <br/> 1800.2097</p> : <p>Gọi mua <br/> hàng..1800.2097</p>
+            }
+            
           </div>
         </div>
 
         <div className='header-locationStore'>
           <CiLocationOn />
-          <h2>Cửa hàng <br/> gần bạn</h2>
+          
+          {
+            windowWidth > 1100 ? <h2>Cửa hàng <br/> gần bạn</h2> : <h2>Cửa <br/> hàng gần bạn</h2>
+          }
+            
+          
         </div>
 
         <div className='header-truckDelivery'>
           <LiaShippingFastSolid />
-          <h2>Tra cứu <br/> đơn hàng</h2>
+          
+          {
+            windowWidth > 1100 ? <h2>Tra cứu <br/> đơn hàng</h2> :<h2>Tra <br/> cứu đơn hàng</h2>
+          }
+          
         </div>
 
         <div className='header-shoppingBag'>
