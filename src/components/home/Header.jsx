@@ -93,7 +93,11 @@ function Header() {
 
         <div className='header-shoppingBag'>
           <IoBagOutline />
-          <h2>Giỏ <br/> hàng</h2>
+          {
+            windowWidth > 770 ? <h2>Giỏ <br/> hàng</h2> :<h2>Giỏ hàng</h2>
+          }
+          <span>0</span>
+          
         </div>
 
         <div className='header-userLogin'>
@@ -102,7 +106,6 @@ function Header() {
         </div>
 
       </div>
-
 
     </div>
   )

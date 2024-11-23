@@ -19,19 +19,19 @@
     position: relative;
 }
 
-.header-container .header-logo img{
-    width: 170px;
-    height: 40px;
-}
-
+/* header logo */
 .header-container .header-logo{
     display: flex;
     align-items: center;
-    padding: 5px 8px;
+    padding: 5px 8px 5px 0px;
     margin-right: 260px;
     border-radius: 10px;
 }
 
+.header-container .header-logo img{
+    width: 170px;
+    height: 40px;
+}
 
 .header-container .header-listBox,
 .header-container .header-locationPrice,
@@ -45,17 +45,6 @@
     /* padding: 5px 8px; */
     margin-right: 10px; 
     border-radius: 10px;
-}
-
-.header-container .header-locationPrice div div{
-    display: flex;
-}
-
-.header-container .header-userLogin{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 .header-container .header-listBox h2,
@@ -79,6 +68,21 @@
     margin-right: 5px;
 }
 
+.header-container .header-listBox,
+.header-container .header-locationPrice,
+.header-container .header-userLogin{
+    background-color: #c94855;
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+
+.header-container .header-listBox{
+    width: 100px;
+    height: 42px;
+    position: absolute;
+    left: 200px;
+}
+
 .header-container .header-search{
     background-color: white;
     padding-left: 10px;
@@ -97,21 +101,6 @@
     border-radius: 10px;
 }
 
-.header-container .header-listBox,
-.header-container .header-locationPrice,
-.header-container .header-userLogin{
-    background-color: #c94855;
-    padding: 5px 8px;
-    border-radius: 10px;
-}
-
-.header-container .header-listBox{
-    width: 100px;
-    height: 42px;
-    position: absolute;
-    left: 200px;
-}
-
 .header-container .header-locationPrice{
     width: 130px;
     height: 42px;
@@ -119,10 +108,30 @@
     left: 315px;
 }
 
+.header-container .header-locationPrice div div{
+    display: flex;
+}
 
 .header-container .header-locationPrice div div p,
 .header-container .header-phone div p:nth-child(1){
     margin-bottom: 3px;
+}
+
+.header-container .header-shoppingBag{
+    position: relative;
+}
+
+.header-container .header-shoppingBag span{
+    position: absolute;
+    top: 10px;
+    left: 9px;
+}
+
+.header-container .header-userLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .header-container .header-listBox:hover,
@@ -137,7 +146,11 @@
 .header-container .header-shoppingBag:hover{
     cursor: pointer;
     background-color: #c94855;
+    /* padding: 5px 8px; */
 }
+
+
+
 
 /* TẠO RESPONSIVE */
 @media screen and (max-width: 1100px) {
@@ -217,22 +230,70 @@
 @media screen and (max-width: 770px){
     .header-container{
         height: 60px;
+        display: flex;
+        justify-content: space-between;
     }
 
+    /* Dùng order để đảo vị trí các thẻ */
     .header-container .header-logo{
-        margin-right: -170px;
+        position: relative;
+        margin: 0 5px;
+        order: 1;
+        padding: 0;
     }
-    
+
     .header-container .header-locationPrice{
-        left: 550px;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        order: 3;
+        width: auto;
     }
+
+    .header-container .header-locationPrice svg{
+        margin: 0;
+    }
+
+
+    .header-container .header-locationPrice div p,
+    .header-container .header-locationPrice div h2{
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-container .header-search{
+        order: 2;
+        margin: 0;
+        padding: 0;
+    }
+
     .header-container .header-search input{
-        width: 50vw;
+        padding: 8;
+        margin: 0;
     }
+
 
     .header-container .header-shoppingBag{
+        order: 4;
         display: flex;
         flex-direction: column;
+        width: 48px;
+        height: 45px;
+        padding: 5px 0px;
+        margin: 0;
+        background-color: #c94855;
+    }
+
+    .header-container .header-shoppingBag svg{
+        margin: 0;
+    }
+
+    .header-container .header-shoppingBag h2{
+        font-size: 10px;
+        font-weight: 400;
+        text-align: center;
     }
 
     .header-container .header-phone,
@@ -240,5 +301,4 @@
     .header-container .header-userLogin{
         display: none;
     }
-    
 }
