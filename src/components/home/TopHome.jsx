@@ -34,18 +34,493 @@ var settings = {
   slidesToScroll: 1,
 };
 
+// Tạo mảng để dùng map đưa dữ liệu vào từng phần
+const topHomeArr = [
+  {
+    linkImage:"https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/khai-truong-gia-lai-dong-nai-22-11-2024-home_ulccbk.webp",
+    title:"MỪNG KHAI TRƯƠNG",
+    des:"Ưu đãi cực khủng",
+  },
+
+  {
+    linkImage:"https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/sliding-home-iphone-16-pro-km-moi_nkityv.webp",
+    title:"IPHONE 16 SERIES",
+    des:"Mua ngay",
+  },
+
+  {
+    linkImage:"https://res.cloudinary.com/dgxmejzk6/image/upload/v1732201512/samsung-s24-ultra-home-20-11_eg0ibj.webp",
+    title:"GALAXY S24 ULTRA",
+    des:"Giá tốt chốt ngay",
+  },
+
+  {
+    linkImage:"https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/ipad-mini-7-sliding-home-20-11_ooh7l1.webp",
+    title:"IPAD MINI 7",
+    des:"Mua ngay",
+  },
+
+  {
+    linkImage:"https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/tecno-camon-30s-banner-home_tkr2dk.webp",
+    title:"TECNO CAMON30",
+    des:"Mua ngay",
+  }
+]
+
+// Tạo mảng cho menu list cho topHome-menuMain
+const menuItemList=[
+  {
+    title:"Điện thoại, Tablet",
+    icon:<IoIosPhonePortrait />,
+    contentTitle: [
+      {
+        titleItem: "Hãng điện thoại",
+        contentTitleItem: ["iPhone","Samsung","Xiaomi","OPPO","realme","TECNO","vivo",
+                          "Infinix","Nokia","Nubia","Nothing Phone","Masstel","Sony"]
+      },
+      {
+        titleItem: "Mức giá điện thoại",
+        contentTitleItem: ["Dưới 2 triệu","Từ 2 đến 4 triệu","Từ 4 đến 7 triệu",
+                          "Từ 7 đến 13 triệu","Từ 13 đến 20 triệu","Trên 20 triệu"]
+      },
+      {
+        titleItem:"Điện thoại HOT",
+        contentTitleItem:["iPhone 16 series","iPhone 15 Promax", "Galaxy Z Fold6", "Galaxy Flip6", "Galaxy S24FE",
+          "OPPO Find X8", "Realme 13+5G","Techo CAMON 30S", "Xiaomi 14T Pro","Oppo Reno12 5G","Samsung Galyxy M55",
+          "Xiamoi redmi 14C","Poco M6"]
+      },
+      {
+        titleItem:"Hãng máy tính bảng",
+        contentTitleItem:["Dưới 2 triệu","Từ 2 đến 4 triệu","Từ 4 đến 7 triệu", "Từ 7 đến 13 triệu","Từ 13 đến 20 triệu","Trên 20 triệu"]
+      },
+      {
+        titleItem:"Máy tính bảng HOT",
+        contentTitleItem:["Dưới 2 triệu","Từ 2 đến 4 triệu","Từ 4 đến 7 triệu", "Từ 7 đến 13 triệu","Từ 13 đến 20 triệu","Trên 20 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"Laptop",
+    icon:<FaLaptop />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"Âm thanh",
+    icon:<FaHeadphones />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"Đồng hồ, Camera",
+    icon:<BsSmartwatch />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"Đồ gia dụng",
+    icon:<RiHomeWifiLine />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"Phụ kiện",
+    icon:<BsFillUsbPlugFill />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"PC, Màn hình, Máy in",
+    icon:<FaComputer />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"Tivi",
+    icon:<PiTelevisionThin />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"Thu cũ đổi mới",
+    icon:<MdOutlineCurrencyExchange />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"Hàng cũ",
+    icon:<MdOutlineCameraswitch />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"Khuyến mãi",
+    icon:<HiOutlineSpeakerphone />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+
+  {
+    title:"Tin công nghệ",
+    icon:<FaRegNewspaper />,
+    contentTitle: [
+      {
+        titleItem: "Thương hiệu",
+        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
+                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+      },
+      {
+        titleItem: "Phân khúc giá",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Nhu cầu sử dụng",
+        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
+                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+      },
+      {
+        titleItem: "Dòng chip",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+      {
+        titleItem: "Kích thước màn hình",
+        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
+                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+      },
+    ]
+  },
+]
+
 
 function TopHome() {
   return (
     <div className='topHome-container'>
 
       <div className='topHome-menuMain'>
-        <div className='topHome-menuMain-item'>
+      
+      {
+        menuItemList.map((item,index) => {
+          return (
+            <div className='topHome-menuMain-item' key={index}>
+              <div>
+                {item.icon}
+                <h2>{item.title}</h2>
+              </div>
+              <MdKeyboardArrowRight/>
+              <div className='topHome-menuMain-popup'>
+                {
+                  item.contentTitle.map((contentItem, index) => {
+                    return (
+                      <div key={index}>
+                        <h3>{contentItem.titleItem}</h3>
+                        <ul>
+                          {
+                            contentItem.contentTitleItem.map((contentTitleItem, index) => {
+                              return (
+                                <li key={index}>{contentTitleItem}</li>
+                              )
+                            })
+                          }
+                        </ul>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </div>
+          )
+        })
+      }
+
+        {/* <div className='topHome-menuMain-item'>
           <div>
             <IoIosPhonePortrait />
             <h2>Điện thoại, Tablet</h2>
           </div>
           <MdKeyboardArrowRight/>
+          
+          <div className='topHome-menuMain-popup'>
+            {
+              menuItemList.map((item,index) => {
+                return (
+                  <div key={index}>
+                    <h3>{item.title}</h3>
+                    <ul>
+                      {
+                        item.contentTitle.map((contentItem, index) => {
+                          return (
+                            <li key={index}>{contentItem}</li>
+                          )
+                        })
+                      }
+                    </ul>
+                  </div>
+                )
+              })
+            }
+          </div>
         </div>
 
         <div className='topHome-menuMain-item'>
@@ -134,70 +609,47 @@ function TopHome() {
             <h2>Tin công nghệ</h2>
           </div>
           <MdKeyboardArrowRight/>
-        </div>
+        </div> */}
         
       </div>
 
       <div className='topHome-sliding'>
-        <Slider {...settings}>
-          <div className='topHome-sliding-image'>
-            <img src="https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/khai-truong-gia-lai-dong-nai-22-11-2024-home_ulccbk.webp" 
-            alt="tuan-le-khai-truong" />
-          </div>
-
-          <div className='topHome-sliding-image'>
-            <img src="https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/sliding-home-iphone-16-pro-km-moi_nkityv.webp" 
-            alt="iphone16" />
-          </div>
-
-          <div className='topHome-sliding-image'>
-            <img src="https://res.cloudinary.com/dgxmejzk6/image/upload/v1732201512/samsung-s24-ultra-home-20-11_eg0ibj.webp" 
-            alt="galaxyS24" />
-          </div>
-
-          <div className='topHome-sliding-image'>
-            <img src="https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/ipad-mini-7-sliding-home-20-11_ooh7l1.webp" 
-            alt="ipadmini7" />
-          </div>
-
-          <div className='topHome-sliding-image'>
-            <img src="https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/tecno-camon-30s-banner-home_tkr2dk.webp" 
-            alt="tecno-camon30" />
-          </div>        
-        </Slider>
+        
+        <div className='topHome-sliding-image'>
+          <Slider {...settings}>
+            {
+              topHomeArr.map((item, index)=>{
+                return(
+                  <div key={index}>
+                    <img src={item.linkImage} 
+                    alt="img"
+                    style={{
+                    }} 
+                    />
+                  </div>
+                )
+              })
+            }
+          </Slider>  
+        </div>
 
         <div className='topHome-sliding-tab'>
-          <div>
-            MỪNG KHAI TRƯƠNG
-            <br/>
-            Ưu đãi cực khủng
-          </div>
-
-          <div>
-            IPHONE 16 SERIES
-            <br/>
-            Mua ngay
-          </div>
-
-          <div>
-            GALAXY S24 ULTRA
-            <br/>
-            Giá tốt chốt ngay
-          </div>
-
-          <div>
-            IPAD MINI 7
-            <br/>
-            Mua ngay
-          </div>
-
-          <div>
-            TECNO CAMON30
-            <br/>
-            Giá tốt chốt ngay
-          </div>
-
+            {
+              topHomeArr.map((item, index)=>{
+                return(
+                  <div>
+                    {item.title}
+                    <br/>
+                    {item.des}
+                  </div>
+                )
+              })
+            }
         </div>
+        
+
+
+        
 
       </div>
 

@@ -26,6 +26,55 @@
     align-items: center;
     justify-content: space-between;
     padding: 3px 5px;
+    position: relative;
+} 
+
+.topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fdfdfd;
+    z-index: 100;
+    width: 485%;
+    left: 100%;
+    /* top:-15px; */
+    padding:5px 15px;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup{
+    top:-50px;
+}
+
+.topHome-container .topHome-menuMain .topHome-menuMain-item:hover {
+    cursor: pointer;
+    background-color: rgb(237, 235, 235);
+    .topHome-menuMain-popup{
+        visibility:visible;
+    };
+}
+
+.topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup div{
+    display: flex;
+    flex-direction: column;
+}
+
+.topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup h3{
+    font-size: 12px;
+    padding: 2px 0px;
+}
+
+.topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup li{
+    list-style: none;
+    font-size: 12px;
+    padding: 5px 0px;
+    text-wrap:wrap;
+}
+
+.topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup li:hover{
+    color:red;
 }
 
 .topHome-container .topHome-menuMain .topHome-menuMain-item >svg{
