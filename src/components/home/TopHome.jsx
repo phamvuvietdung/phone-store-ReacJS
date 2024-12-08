@@ -265,29 +265,16 @@ const menuItemList=[
     icon:<FaComputer />,
     contentTitle: [
       {
-        titleItem: "Thương hiệu",
-        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
-                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+        titleItem: "Loại PC",
+        contentTitleItem: ["Máy bộ","All in One","Build PCR"]
       },
       {
-        titleItem: "Phân khúc giá",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Màn hình",
+        contentTitleItem: ["ASUS","Samsung","Dell","LG"]
       },
       {
-        titleItem: "Nhu cầu sử dụng",
-        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
-                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
-      },
-      {
-        titleItem: "Dòng chip",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
-      },
-      {
-        titleItem: "Kích thước màn hình",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Thiết bị văn phòng",
+        contentTitleItem: ["Máy in","Phần mềm","Decor"]
       },
     ]
   },
@@ -297,29 +284,21 @@ const menuItemList=[
     icon:<PiTelevisionThin />,
     contentTitle: [
       {
-        titleItem: "Thương hiệu",
-        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
-                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+        titleItem: "Chọn theo hãng",
+        contentTitleItem: ["samsung","LG","Sony","Coocaa"]
       },
       {
-        titleItem: "Phân khúc giá",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Chọn theo kích thước",
+        contentTitleItem: ["Dưới 32 inch","Từ 32 đến 45 inch","Từ 45 đến 60 inch",
+                          "Trên 60 inch"]
       },
       {
-        titleItem: "Nhu cầu sử dụng",
-        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
-                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+        titleItem: "Chọn theo độ phân giải",
+        contentTitleItem: ["Tivi 4k", "Tivi 8K","Tivi full HD","Tivi OLED","Tivi QLED"]
       },
       {
-        titleItem: "Dòng chip",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
-      },
-      {
-        titleItem: "Kích thước màn hình",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Sản phẩm nổi bật",
+        contentTitleItem: ["Google Tivi Coocaa khung tranh QLED 4K 55 inch","Smart Tivi NanoCell LG 4K 55 inch"]
       },
     ]
   },
@@ -329,29 +308,16 @@ const menuItemList=[
     icon:<MdOutlineCurrencyExchange />,
     contentTitle: [
       {
-        titleItem: "Thương hiệu",
-        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
-                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+        titleItem: "Chọn theo sản phẩm",
+        contentTitleItem: ["Thu cũ iPhone","Thu cũ Tivi","Thu cũ Laptop"]
       },
       {
-        titleItem: "Phân khúc giá",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Sản phẩm trợ giá cao",
+        contentTitleItem: ["iphone 16/ 15/ 14","Galaxy Z-Fold/ Z-Flip","Macbook"]
       },
       {
-        titleItem: "Nhu cầu sử dụng",
-        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
-                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
-      },
-      {
-        titleItem: "Dòng chip",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
-      },
-      {
-        titleItem: "Kích thước màn hình",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Sản phẩm giá thu cao",
+        contentTitleItem: ["iphone 16 series","Macbook M1","Galaxy S24 Ultra"]
       },
     ]
   },
@@ -361,27 +327,21 @@ const menuItemList=[
     icon:<MdOutlineCameraswitch />,
     contentTitle: [
       {
-        titleItem: "Thương hiệu",
-        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
-                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+        titleItem: "Chọn loại sản phẩm cũ",
+        contentTitleItem: ["Điện thoại cũ","Máy tính bảng cũ","Laptop cũ","Mac cũ","Tai nghe cũ",
+                          "Loa cũ","Tivi cũ"]
       },
       {
-        titleItem: "Phân khúc giá",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Chọn dòng Iphone cũ",
+        contentTitleItem: ["Iphone 16 series cũ","Iphone 15 series cũ","Iphone 14 series cũ","Iphone 13 series cũ",
+                          "Iphone 12 series cũ"]
       },
       {
-        titleItem: "Nhu cầu sử dụng",
-        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
-                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+        titleItem: "Điện thoại android cũ",
+        contentTitleItem: ["Samsung cũ","Nokia cũ","Oppo cũ","Realme cũ","Infinix cũ"]
       },
       {
-        titleItem: "Dòng chip",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
-      },
-      {
-        titleItem: "Kích thước màn hình",
+        titleItem: "Sản phẩm nổi bật",
         contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
                           "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
       },
@@ -403,16 +363,6 @@ const menuItemList=[
       {
         titleItem: "Ưu đãi sinh viên",
         contentTitleItem: ["Nhập hội S-student","Laptop giảm giá","Điện thoại giảm giá","Hàng cũ giảm thêm"]
-      },
-      {
-        titleItem: "Dòng chip",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
-      },
-      {
-        titleItem: "Kích thước màn hình",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
       },
     ]
   },
