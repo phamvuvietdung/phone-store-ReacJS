@@ -19,6 +19,7 @@
     padding:2px 6px;
     border-radius: 10px;
     box-shadow: 3px 3px 8px 0.2px black;
+    position: relative;
 }
 
 .topHome-container .topHome-menuMain .topHome-menuMain-item{
@@ -26,7 +27,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 3px 5px;
-    position: relative;
+    /* position: relative; */ /* để position relative ở topHome-menuMain để có thể canh cố định theo vị trí đó*/
 } 
 
 .topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup{
@@ -37,28 +38,28 @@
     background-color: #fdfdfd;
     z-index: 100;
     width: 485%;
+    min-height: 350px;
     left: 100%;
-    /* top:-15px; */
+    top:0;
     padding:5px 15px;
     border-radius: 10px;
     visibility: hidden;
 }
 
-.topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup{
-    top:-50px;
-}
-
 .topHome-container .topHome-menuMain .topHome-menuMain-item:hover {
     cursor: pointer;
     background-color: rgb(237, 235, 235);
-    .topHome-menuMain-popup{
-        visibility:visible;
-    };
+}
+
+.topHome-container .topHome-menuMain .topHome-menuMain-item:hover .topHome-menuMain-popup{
+    visibility:visible;
+    margin: 0;
 }
 
 .topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup div{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup h3{
@@ -76,6 +77,7 @@
 .topHome-container .topHome-menuMain .topHome-menuMain-item .topHome-menuMain-popup li:hover{
     color:red;
 }
+
 
 .topHome-container .topHome-menuMain .topHome-menuMain-item >svg{
     height: 20px;

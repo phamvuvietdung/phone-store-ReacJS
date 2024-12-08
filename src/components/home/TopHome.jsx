@@ -121,13 +121,13 @@ const menuItemList=[
       },
       {
         titleItem: "Dòng chip",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        contentTitleItem: ["Laptop core i3","Laptop core i5","Laptop core i7","Laptop core i9",
+                          "Apple M1 series","Apple M3 series","Apple M4 series", "AMD Ryzen", "Intel Core Ultra"]
       },
       {
         titleItem: "Kích thước màn hình",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        contentTitleItem: ["Laptop 12 inch", "Laptop 13 inch", "Laptop 14 inch","Laptop 15.6 inch",
+                          "Laptop 15 inch","Laptop 16 inch"]
       },
     ]
   },
@@ -137,29 +137,37 @@ const menuItemList=[
     icon:<FaHeadphones />,
     contentTitle: [
       {
-        titleItem: "Thương hiệu",
-        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
-                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+        titleItem: "Chọn loại tay nghe",
+        contentTitleItem: ["Bluetooth","Chụp tai","Nhét tai","Có dây","Gaming",
+                          "Thể thao","Gaming","Xem tất cả tai nghe"]
       },
       {
-        titleItem: "Phân khúc giá",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Hãng tai nghe",
+        contentTitleItem: ["Apple","Sony","JBL","Samsung","Marshall","Soundpeats","Bose","Edifier",
+                          "Xiaomi","Huwei","Senheiser","Assus","Havit"]
       },
       {
-        titleItem: "Nhu cầu sử dụng",
-        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
-                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+        titleItem: "Chọn theo giá",
+        contentTitleItem: ["Tai nghe dưới 200k","Tai nghe dưới 500k","Tai nghe dưới 1 triệu",
+                          "Tai nghe dưới 2 triệu", "Tai nghe dưới 5 triệu"]
       },
       {
-        titleItem: "Dòng chip",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Chọn loại loa",
+        contentTitleItem: ["Loa bluetooth","Loa Karaoke","Loa mini","Loa Soundbar","Loa vi tính",
+                          "Xem tất cả các loa"]
       },
       {
-        titleItem: "Kích thước màn hình",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Hãng loa",
+        contentTitleItem: ["JBL","Marshall","Harmon Kadon","Acnos","Samsung","Sony","Arirang","LG",
+                          "Alpha work","Edifier","Bose","Nanomax"]
+      },
+      {
+        titleItem: "Sản phẩm nổi bật",
+        contentTitleItem: ["Airpod 4","Airpod Pro 2","Galaxy bud 3 pro","JPL tour pro 2"]
+      },
+      {
+        titleItem: "Mic",
+        contentTitleItem: ["Mic kông dây","Mic thu âm"]
       },
     ]
   },
@@ -169,29 +177,24 @@ const menuItemList=[
     icon:<BsSmartwatch />,
     contentTitle: [
       {
-        titleItem: "Thương hiệu",
-        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
-                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+        titleItem: "Loại đồng hồ",
+        contentTitleItem: ["Đồng hồ thông minh", "Vòng đeo tay thông minh","Đồng hồ định vị trẻ em","Dây đeo"]
       },
       {
-        titleItem: "Phân khúc giá",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Chọn theo thương hiệu",
+        contentTitleItem: ["Apple watch","Samsung", "Xiaomi","Garmin"]
       },
       {
-        titleItem: "Nhu cầu sử dụng",
-        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
-                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+        titleItem: "Sản phẩm nổi bật",
+        contentTitleItem: ["Apple watch series 10", "Samsung Galaxy watch 7","Xiaomi miband 9","Garmin Vivoactive 5"]
       },
       {
-        titleItem: "Dòng chip",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Camera",
+        contentTitleItem: ["Camera an ninh","Camera hành trình","Camera AI", "Flycam","Xem tất cả camera"]
       },
       {
-        titleItem: "Kích thước màn hình",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Camera nổi bật",
+        contentTitleItem: ["Máy ảnh Fujifilm","Máy ảnh Canon","Máy ảnh Sony"]
       },
     ]
   },
@@ -201,29 +204,26 @@ const menuItemList=[
     icon:<RiHomeWifiLine />,
     contentTitle: [
       {
-        titleItem: "Thương hiệu",
-        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
-                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+        titleItem: "Gia dụng nhà bếp",
+        contentTitleItem: ["Nồi chiên không dầu","Máy rửa bát","Nồi cơm điện",
+                          "Máy xay sinh tố","Lò vi sóng"]
       },
       {
-        titleItem: "Phân khúc giá",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Sức khỏe - Làm đẹp",
+        contentTitleItem: ["Máy sấy tóc","Máy lọc không khí","Máy đo huyết áp","Máy massagae",
+                          "Máy cạo râu"]
       },
       {
-        titleItem: "Nhu cầu sử dụng",
-        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
-                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+        titleItem: "Thiết bị gia đình",
+        contentTitleItem: ["Robot hút bụi","Quạt","Máy hút bụi cầm tay","TV box"]
       },
       {
-        titleItem: "Dòng chip",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Sản phẩm nổi bật",
+        contentTitleItem: ["Robot hút bụi Extrax U5","Máy playstation PS5 Slim"]
       },
       {
-        titleItem: "Kích thước màn hình",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Thương hiệu gia dụng",
+        contentTitleItem: ["Philips","Sunhouse","Panasonic"]
       },
     ]
   },
@@ -233,27 +233,27 @@ const menuItemList=[
     icon:<BsFillUsbPlugFill />,
     contentTitle: [
       {
-        titleItem: "Thương hiệu",
+        titleItem: "Phụ kiện di động",
         contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
                           "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
       },
       {
-        titleItem: "Phân khúc giá",
+        titleItem: "Phụ kiện laptop",
         contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
                           "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
       },
       {
-        titleItem: "Nhu cầu sử dụng",
+        titleItem: "Thiết bị mạng",
         contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
                           "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
       },
       {
-        titleItem: "Dòng chip",
+        titleItem: "Gaming gear",
         contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
                           "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
       },
       {
-        titleItem: "Kích thước màn hình",
+        titleItem: "Phụ kiện khác",
         contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
                           "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
       },
@@ -393,19 +393,16 @@ const menuItemList=[
     icon:<HiOutlineSpeakerphone />,
     contentTitle: [
       {
-        titleItem: "Thương hiệu",
-        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
-                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
+        titleItem: "Khuyến mãi",
+        contentTitleItem: ["Hot sale cuối tuần","Siêu sale phụ kiện","Ưu đãi thanh toán"]
       },
       {
-        titleItem: "Phân khúc giá",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Thu cũ đổi mới giá hời",
+        contentTitleItem: ["Iphone 16 trợ giá","Galaxy Z-fold 6 trợ giá"]
       },
       {
-        titleItem: "Nhu cầu sử dụng",
-        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
-                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
+        titleItem: "Ưu đãi sinh viên",
+        contentTitleItem: ["Nhập hội S-student","Laptop giảm giá","Điện thoại giảm giá","Hàng cũ giảm thêm"]
       },
       {
         titleItem: "Dòng chip",
@@ -425,29 +422,8 @@ const menuItemList=[
     icon:<FaRegNewspaper />,
     contentTitle: [
       {
-        titleItem: "Thương hiệu",
-        contentTitleItem: ["Mac","ASUS","Lenovo","Dell","HP","Acer",
-                          "LG","Huawei","MSI","Gigabyte","Vaio","Masstel"]
-      },
-      {
-        titleItem: "Phân khúc giá",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
-      },
-      {
-        titleItem: "Nhu cầu sử dụng",
-        contentTitleItem: ["Văn phòng","Gaming","Đồ họa - Kỹ thuật","Sinh viên",
-                          "Cảm ứng","Laptop AI", "Mac CTO - Nâng cấp theo cách của bạn"]
-      },
-      {
-        titleItem: "Dòng chip",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
-      },
-      {
-        titleItem: "Kích thước màn hình",
-        contentTitleItem: ["Dưới 10 triệu","Từ 10 đến 15 triệu","Từ 15 đến 20 triệu",
-                          "Từ 20 đến 25 triệu","Từ 25 đến 30 triệu","Trên 30 triệu"]
+        titleItem: "Chuyên mục",
+        contentTitleItem: ["Tin công nghệ","Khám phá","S-game","Tư vấn","Trên tay","Thị trường","Thủ thuật - Hỏi đáp"]
       },
     ]
   },
@@ -469,17 +445,17 @@ function TopHome() {
                 <h2>{item.title}</h2>
               </div>
               <MdKeyboardArrowRight/>
-              <div className='topHome-menuMain-popup'>
+              <div className='topHome-menuMain-popup' key={index}>
                 {
-                  item.contentTitle.map((contentItem, index) => {
+                  item.contentTitle.map((contentItem, contentIndex) => {
                     return (
-                      <div key={index}>
+                      <div key={contentIndex}>
                         <h3>{contentItem.titleItem}</h3>
                         <ul>
                           {
-                            contentItem.contentTitleItem.map((contentTitleItem, index) => {
+                            contentItem.contentTitleItem.map((contentTitleItem, contentTitleIndex) => {
                               return (
-                                <li key={index}>{contentTitleItem}</li>
+                                <li key={contentTitleIndex}>{contentTitleItem}</li>
                               )
                             })
                           }
