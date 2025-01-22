@@ -1,5 +1,6 @@
 import React from 'react'
 import "../../styles/home/tophome.css"
+// Dùng react nên sẽ tìm icon trên reac-icon
 import { IoIosPhonePortrait } from "react-icons/io";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaLaptop } from "react-icons/fa";
@@ -418,125 +419,7 @@ function TopHome() {
             </div>
           )
         })
-      }
-
-        {/* <div className='topHome-menuMain-item'>
-          <div>
-            <IoIosPhonePortrait />
-            <h2>Điện thoại, Tablet</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-          
-          <div className='topHome-menuMain-popup'>
-            {
-              menuItemList.map((item,index) => {
-                return (
-                  <div key={index}>
-                    <h3>{item.title}</h3>
-                    <ul>
-                      {
-                        item.contentTitle.map((contentItem, index) => {
-                          return (
-                            <li key={index}>{contentItem}</li>
-                          )
-                        })
-                      }
-                    </ul>
-                  </div>
-                )
-              })
-            }
-          </div>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            <FaLaptop />
-            <h2>Laptop</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            <FaHeadphones />
-            <h2>Âm thanh</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            <BsSmartwatch />
-            <h2>Đồng hồ, Camera</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            <RiHomeWifiLine />
-            <h2>Đồ gia dụng</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            <BsFillUsbPlugFill />
-            <h2>Phụ kiện</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            <FaComputer />
-            <h2>PC, Màn hình, Máy in</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            <PiTelevisionThin />
-            <h2>Tivi</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            < MdOutlineCurrencyExchange/>
-            <h2>Thu cũ đổi mới</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            <MdOutlineCameraswitch />
-            <h2>Hàng cũ</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            <HiOutlineSpeakerphone />
-            <h2>Khuyến mãi</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div>
-
-        <div className='topHome-menuMain-item'>
-          <div>
-            <FaRegNewspaper />
-            <h2>Tin công nghệ</h2>
-          </div>
-          <MdKeyboardArrowRight/>
-        </div> */}
-        
+      }        
       </div>
 
       <div className='topHome-sliding'>

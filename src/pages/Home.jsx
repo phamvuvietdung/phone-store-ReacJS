@@ -1,8 +1,12 @@
 import React from 'react'
-
+import TopHome from '../components/home/TopHome';
+import FeatureProduct from '../components/home/FeatureProduct';
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <TopHome />
+      <FeatureProduct />
+    </div>
   )
 }
 

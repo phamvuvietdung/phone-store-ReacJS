@@ -52,7 +52,7 @@
 .header-container .header-locationStore h2,
 .header-container .header-truckDelivery h2,
 .header-container .header-shoppingBag h2,
-.header-container .header-userLogin h2{
+.header-container .header-userLogin a h2{
     font-size: 12px;
 }
 
@@ -63,7 +63,7 @@
 .header-container .header-locationStore svg,
 .header-container .header-truckDelivery svg,
 .header-container .header-shoppingBag svg,
-.header-container .header-userLogin svg{
+.header-container .header-userLogin a svg{
     font-size: 25px;
     margin-right: 5px;
 }
@@ -149,6 +149,18 @@
     /* padding: 5px 8px; */
 }
 
+.header-container .header-userLogin a{
+    text-decoration: none;
+}
+
+.header-container .header-userLogin a svg{
+    color: white;
+}
+
+.header-container .header-userLogin a h2{
+    color: white;
+    font-size: 12px;
+}
 
 
 
