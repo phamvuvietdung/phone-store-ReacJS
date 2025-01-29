@@ -56,6 +56,13 @@
     font-size: 12px;
 }
 
+.header-container .header-userLogout{
+    background-color: #c94855;
+    padding: 15px 5px;
+    margin-left: 3px;
+    border-radius: 10px;
+}
+
 .header-container .header-listBox svg,
 /* dùng dấu > để chỉ cho thẻ svg con. không lấy hết thẻ svg trong class price */
 .header-container .header-locationPrice >svg,
@@ -127,7 +134,8 @@
     left: 9px;
 }
 
-.header-container .header-userLogin{
+.header-container .header-userLogin,
+.header-container .header-userLogout{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,7 +144,8 @@
 
 .header-container .header-listBox:hover,
 .header-container .header-locationPrice:hover,
-.header-container .header-userLogin:hover{
+.header-container .header-userLogin:hover,
+.header-container .header-userLogout:hover{
     cursor: pointer;
 }
 
@@ -149,15 +158,18 @@
     /* padding: 5px 8px; */
 }
 
-.header-container .header-userLogin a{
+.header-container .header-userLogin a,
+.header-container .header-userLogout a{
     text-decoration: none;
 }
 
-.header-container .header-userLogin a svg{
+.header-container .header-userLogin a svg,
+.header-container .header-userLogout a svg{
     color: white;
 }
 
-.header-container .header-userLogin a h2{
+.header-container .header-userLogin a h2,
+.header-container .header-userLogout h2{
     color: white;
     font-size: 12px;
 }
@@ -309,8 +321,25 @@
     }
 
     .header-container .header-phone,
-    .header-container .header-locationStore,
-    .header-container .header-userLogin{
+    .header-container .header-locationStore{
         display: none;
+    }
+
+    .header-container .header-userLogin{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        order: 5;
+        width: auto;
+    }
+
+    .header-container .header-userLogout{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        order: 6;
+        width: auto;
     }
 }

@@ -7,7 +7,7 @@ import { FiPhone } from "react-icons/fi";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { IoBagOutline } from "react-icons/io5";
 import { FaRegUserCircle } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 // Import file css cho header. Dấu ../ cho phép lùi lại thư mục cha
@@ -15,20 +15,28 @@ import "../../styles/home/header.css"
 
 function Header() {
 
+  const navigate = useNavigate()
+
   // Dùng useState để lấy chiều rộng của màn hình
   // Dùng chiều rộng của màn hình để dùng hiển thị các thành phần của header
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  // tạo biến user để hiển thị tên người đăng nhập sau khi login
+  const dataUser = JSON.parse(localStorage.getItem("register"))
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
     window.addEventListener('resize', handleResize)
     
     return () => window.removeEventListener('resize', handleResize)
+    
   }, [])
   // console.log(windowWidth)
 
-  // tạo biến user để hiển thị tên người đăng nhập sau khi login
-  const dataUser = JSON.parse(localStorage.getItem("register"))
+  const handleLogout = () =>{
+    localStorage.removeItem("register")
+    navigate("/register")
+    // window.location.reload()
+  }
 
   return (
     <div className='header-bgcolor'>
@@ -107,13 +115,16 @@ function Header() {
         <div className='header-userLogin'>
           <Link to="/login">
             <FaRegUserCircle />
-            <h2>
-              {/* Dùng toán tử 3 ngôi hiển thị tên người dùng sau đăng nhập */}
-              {dataUser ? dataUser.fullname : "Đăng nhập"}
-            </h2>
+            {/* Dùng toán tử 3 ngôi hiển thị tên người dùng sau đăng nhập */}
+            {dataUser ? <h2>{dataUser.fullname}</h2> : <h2>Đăng nhập</h2>}
           </Link>
         </div>
 
+        {/* Dùng toán tử 3 ngôi để hiển thị thẻ logout */}
+        {dataUser ? <div onClick={handleLogout} className='header-userLogout'>
+          <h2>Log out</h2></div> 
+        : ""}
+        
       </div>
 
     </div>

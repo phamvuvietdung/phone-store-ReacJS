@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 
 // Dùng usenavigate để chuyển trang
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
 
@@ -37,7 +37,7 @@ function Login() {
         theme: "light",
       });
       // Chuyển về trang home
-      setTimeout(() => navigate('/home'), 3100);
+      setTimeout(() => navigate('/'), 3100);
       
     } else {
       toast.error("Số điện thoại hoặc mật khẩu không đúng!", {
@@ -64,7 +64,7 @@ function Login() {
         <input type="tel" placeholder="Nhập số điện thoại" {...register("phone")}/>
         <input type="password" placeholder="Nhập mật khẩu" {...register("password")} />
         <input type="submit" value="Đăng nhập" />
-        <a href="/register"> <p> Chưa có tài khoản? Đăng ký ngay </p></a>
+        <Link to="/register"> <p> Chưa có tài khoản? Đăng ký ngay </p></Link>
       </form>
 
       <ToastContainer
