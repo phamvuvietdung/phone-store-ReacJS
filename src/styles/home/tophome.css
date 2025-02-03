@@ -154,14 +154,21 @@
     align-items: center;
 }
 
+
 .topHome-container .topHome-sliding .topHome-sliding-tab div{
-    width: 134px;
+    /* width: 134px; */
+    width: 100%;
+    height: 100%;
     font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
 .topHome-container .topHome-sliding .topHome-sliding-tab div:hover{
-    background-color: gray;
+    background-color: rgb(237, 235, 235);
+    border-radius: 10px;
 }
 
 /* topHome-rightBanner */

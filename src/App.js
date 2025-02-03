@@ -5,12 +5,14 @@ import Home from './pages/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from './pages/Register'
 import Login from './pages/Login'
-import NoPage from './pages/NoPage';
+import NoPage from './pages/NoPage'
+import ProductDetails from './pages/ProductDetails'
 
 function App() {
   return (
     <div className="cellphone-container">
-      {/* Bọc các trang trong thẻ browser router để chuyển trang. */}
+      {/* Bọc các trang trong thẻ browser router để chuyển trang.
+      hoặc Bọc toàn bộ thẻ app trong file index.js cũng được*/}
       
       <BrowserRouter>
         <Header/>
@@ -20,6 +22,7 @@ function App() {
             <Route path="/home" element={<Home/>}/>
             <Route path="/register" element={<Register/>} />
             <Route path="/login" element={<Login/>}/>
+            <Route path="/product/:id" element={<ProductDetails/>}/>
             <Route path='/*' element={<NoPage/>}/>
           </Route>
         </Routes>
