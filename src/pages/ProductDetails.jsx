@@ -1,18 +1,25 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import productDetails from "../datas/productDetails"
+import React from "react";
+import { useParams } from "react-router-dom";
+import productDetails from "../datas/productDetails";
 
 function ProductDetails() {
-  let {id} = useParams()
+  let idRouting = useParams();
 
-  console.log("id",id)
-  console.log(productDetails.title)
-  
+  const contentDetails = productDetails.filter((item) => {
+    return item.id == idRouting.id;
+  });
   return (
     <div>
-      Product details
+      {contentDetails.map((item) => {
+        return (
+          <>
+            <h1>{item.title}</h1>
+            <p>{item.des}</p>
+          </>
+        );
+      })}
     </div>
-  )
+  );
 }
 
-export default ProductDetails
+export default ProductDetails;

@@ -1,16 +1,34 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/nopage/nopage.css";
+// copy from codepen https://codepen.io/Navedkhan012/pen/vrWQMY
 
 function NoPage() {
-return (
-    <div className='NoPage-container'>
-        <img 
-        src="https://res.cloudinary.com/dgxmejzk6/image/upload/v1738155900/page-not-found-404-png_g9gb3u.png"
-        alt="page-not-found"/>
-    
-        <Link to="/">Back to Home</Link>
-    </div>
-)
+  return (
+    <section class="page_404">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 ">
+            <div class="col-sm-10 col-sm-offset-1  text-center">
+              <div class="four_zero_four_bg">
+                <h1 class="text-center ">404</h1>
+              </div>
+
+              <div class="contant_box_404">
+                <h3 class="h2">Look like you're lost</h3>
+
+                <p>the page you are looking for not avaible!</p>
+
+                <a href="/" class="link_404">
+                  Go to Home
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default NoPage
+export default NoPage;

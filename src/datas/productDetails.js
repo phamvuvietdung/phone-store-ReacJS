@@ -1,6 +1,6 @@
 const productDetails = [
     {
-        id: 1,
+        id: 0,
         title: "Iphone 16 Promax 256GB | Chính hãng VNA",
         des: `Thông tin sản phẩm
         Máy mới 100% , chính hãng Apple Việt Nam.
@@ -9,7 +9,7 @@ const productDetails = [
         1 ĐỔI 1 trong 30 ngày nếu có lỗi phần cứng nhà sản xuất. Bảo hành 12 tháng tại trung tâm bảo hành chính hãng Apple`
     },
     {
-        id: 2,
+        id: 1,
         title: "Samsung Galaxy S24 Ultra 12GB 256GB",
         des:`Thông tin sản phẩm
         Mới, đầy đủ phụ kiện từ nhà sản xuất
@@ -20,3 +20,5 @@ const productDetails = [
         Bảo hành 12 tháng tại trung tâm bảo hành Chính hãng. 1 đổi 1 trong 30 ngày nếu có lỗi phần cứng từ nhà sản xuất.`
     }
 ]
+
+export default productDetails;

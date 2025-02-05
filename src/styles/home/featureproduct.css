@@ -13,14 +13,23 @@
 
 .featureProduct-container .featureProduct-title h2{
     font-size: 22px;
+    width: 20%;
 }
 
 .featureProduct-container .featureProduct-title .featureProduct-title-list{
     display: flex;
     justify-content: space-between;
+    width: 75%;
 }
 
-.featureProduct-container .featureProduct-title .featureProduct-title-list a{
+.featureProduct-container .featureProduct-title .featureProduct-title-list ul{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    list-style-type: none;
+}
+
+.featureProduct-container .featureProduct-title .featureProduct-title-list ul li a{
     background-color:#f3f4f6;
     text-decoration: none;
     color: black;
@@ -32,18 +41,32 @@
     border-radius: 10px;
 }
 
+/* Phần icon */
+.featureProduct-container .featureProduct-title .featureProduct-title-list a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    text-wrap: nowrap;
+    padding: 5px 12px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
 /* THÔNG TIN TỪNG SẢN PHẨM */
+
+/* nếu dùng slide thì bỏ phần  .featureProduct-container .featureProduct-list*/
 .featureProduct-container .featureProduct-list{
     /* background-color: aqua; */
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100%; */
 }
 
 .featureProduct-container .featureProduct-list .featureProduct-list-info{
     display: flex;
     flex-direction: column;
     width: 19.5%;
+    height: 450px;
     border-radius: 10px;
     border: #f3f4f6 solid;
     box-shadow: 3px 3px 0.05px gainsboro;
@@ -154,17 +177,19 @@
     margin-bottom: 5px;
     background-color: rgb(243, 244, 246);
     border-radius: 5px;
-    
-    p{
-        text-align: justify;
-        padding: 5px 5px 10px 2px;
-        font-size: 12px;
-        line-height: 18px;
-        height: 44px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    };
 }
+
+.featureProduct-container .featureProduct-list .featureProduct-list-info .product-promotion .p {
+    text-align: justify;
+    padding: 5px 5px 10px 2px;
+    font-size: 12px;
+    line-height: 18px;
+    height: 44px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 
 .featureProduct-container .featureProduct-list .featureProduct-list-info .product-rating{
     display: flex;
@@ -172,11 +197,12 @@
     justify-content: space-between;
     font-size: 12px;
     padding-bottom:10px;
-    div{
-        display: flex;
-        width: 35%;
-        justify-content: space-between;
-    }
+}
+
+.featureProduct-container .featureProduct-list .featureProduct-list-info .product-rating div {
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
 }
 
 .featureProduct-container .featureProduct-list .featureProduct-list-info .product-rating div:nth-child(1)>svg{
