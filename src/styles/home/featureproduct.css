@@ -63,7 +63,7 @@
 }
 
 .featureProduct-container .featureProduct-list .featureProduct-list-info{
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     width: 19.5%;
     height: 450px;
