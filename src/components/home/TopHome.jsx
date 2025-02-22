@@ -37,6 +37,7 @@ var settings = {
 // Tạo mảng để dùng map đưa dữ liệu vào từng phần
 const topHomeArr = [
   {
+    id: 0,
     linkImage:
       "https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/khai-truong-gia-lai-dong-nai-22-11-2024-home_ulccbk.webp",
     title: "MỪNG KHAI TRƯƠNG",
@@ -44,6 +45,7 @@ const topHomeArr = [
   },
 
   {
+    id: 1,
     linkImage:
       "https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/sliding-home-iphone-16-pro-km-moi_nkityv.webp",
     title: "IPHONE 16 SERIES",
@@ -51,6 +53,7 @@ const topHomeArr = [
   },
 
   {
+    id: 2,
     linkImage:
       "https://res.cloudinary.com/dgxmejzk6/image/upload/v1732201512/samsung-s24-ultra-home-20-11_eg0ibj.webp",
     title: "GALAXY S24 ULTRA",
@@ -58,6 +61,7 @@ const topHomeArr = [
   },
 
   {
+    id: 3,
     linkImage:
       "https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/ipad-mini-7-sliding-home-20-11_ooh7l1.webp",
     title: "IPAD MINI 7",
@@ -65,6 +69,7 @@ const topHomeArr = [
   },
 
   {
+    id: 4,
     linkImage:
       "https://res.cloudinary.com/dgxmejzk6/image/upload/v1732190244/tecno-camon-30s-banner-home_tkr2dk.webp",
     title: "TECNO CAMON30",
@@ -72,6 +77,7 @@ const topHomeArr = [
   },
 
   {
+    id: 5,
     linkImage:
       "https://res.cloudinary.com/dgxmejzk6/image/upload/v1738427909/samsung-s25-pha-gia-moi-home_pl4hmi.webp",
     title: "GALAXY S25 ULTRA",
@@ -82,10 +88,12 @@ const topHomeArr = [
 // Tạo mảng cho menu list cho topHome-menuMain
 const menuItemList = [
   {
+    id: 0,
     title: "Điện thoại, Tablet",
     icon: <IoIosPhonePortrait />,
     contentTitle: [
       {
+        id: 0,
         titleItem: "Hãng điện thoại",
         contentTitleItem: [
           "iPhone",
@@ -104,6 +112,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 1,
         titleItem: "Mức giá điện thoại",
         contentTitleItem: [
           "Dưới 2 triệu",
@@ -115,6 +124,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 2,
         titleItem: "Điện thoại HOT",
         contentTitleItem: [
           "iPhone 16 series",
@@ -133,6 +143,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 3,
         titleItem: "Hãng máy tính bảng",
         contentTitleItem: [
           "Dưới 2 triệu",
@@ -144,6 +155,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 4,
         titleItem: "Máy tính bảng HOT",
         contentTitleItem: [
           "Dưới 2 triệu",
@@ -158,10 +170,12 @@ const menuItemList = [
   },
 
   {
+    id: 1,
     title: "Laptop",
     icon: <FaLaptop />,
     contentTitle: [
       {
+        id: 0,
         titleItem: "Thương hiệu",
         contentTitleItem: [
           "Mac",
@@ -179,6 +193,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 1,
         titleItem: "Phân khúc giá",
         contentTitleItem: [
           "Dưới 10 triệu",
@@ -190,6 +205,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 2,
         titleItem: "Nhu cầu sử dụng",
         contentTitleItem: [
           "Văn phòng",
@@ -202,6 +218,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 3,
         titleItem: "Dòng chip",
         contentTitleItem: [
           "Laptop core i3",
@@ -216,6 +233,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 4,
         titleItem: "Kích thước màn hình",
         contentTitleItem: [
           "Laptop 12 inch",
@@ -230,10 +248,12 @@ const menuItemList = [
   },
 
   {
+    id: 2,
     title: "Âm thanh",
     icon: <FaHeadphones />,
     contentTitle: [
       {
+        id: 0,
         titleItem: "Chọn loại tay nghe",
         contentTitleItem: [
           "Bluetooth",
@@ -247,6 +267,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 1,
         titleItem: "Hãng tai nghe",
         contentTitleItem: [
           "Apple",
@@ -265,6 +286,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 2,
         titleItem: "Chọn theo giá",
         contentTitleItem: [
           "Tai nghe dưới 200k",
@@ -275,6 +297,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 3,
         titleItem: "Chọn loại loa",
         contentTitleItem: [
           "Loa bluetooth",
@@ -286,6 +309,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 4,
         titleItem: "Hãng loa",
         contentTitleItem: [
           "JBL",
@@ -303,6 +327,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 5,
         titleItem: "Sản phẩm nổi bật",
         contentTitleItem: [
           "Airpod 4",
@@ -312,6 +337,7 @@ const menuItemList = [
         ],
       },
       {
+        id: 6,
         titleItem: "Mic",
         contentTitleItem: ["Mic kông dây", "Mic thu âm"],
       },

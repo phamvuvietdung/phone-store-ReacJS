@@ -1,252 +1,415 @@
-.featureProduct-container{
-    width: 1200px;
-    margin: 0px auto;
-    margin-top: 20px;
+.featureProduct-container {
+  width: 1200px;
+  margin: 0px auto;
+  margin-top: 20px;
 }
 
 /* PHẦN TIÊU ĐỀ TITTLE */
-.featureProduct-container .featureProduct-title{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+.featureProduct-container .featureProduct-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
-.featureProduct-container .featureProduct-title h2{
-    font-size: 22px;
-    width: 20%;
+.featureProduct-container .featureProduct-title h2 {
+  font-size: 22px;
+  width: 20%;
 }
 
-.featureProduct-container .featureProduct-title .featureProduct-title-list{
-    display: flex;
-    justify-content: space-between;
-    width: 75%;
+.featureProduct-container .featureProduct-title .featureProduct-title-list {
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
 }
 
-.featureProduct-container .featureProduct-title .featureProduct-title-list ul{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    list-style-type: none;
+.featureProduct-container .featureProduct-title .featureProduct-title-list ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  list-style-type: none;
 }
 
-.featureProduct-container .featureProduct-title .featureProduct-title-list ul li a{
-    background-color:#f3f4f6;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    text-wrap: nowrap;
-    padding: 5px 12px;
-    font-size: 13px;
-    margin-left: 10px;
-    border-radius: 10px;
+.featureProduct-container
+  .featureProduct-title
+  .featureProduct-title-list
+  ul
+  li
+  a {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  text-wrap: nowrap;
+  padding: 5px 12px;
+  font-size: 13px;
+  margin-left: 10px;
+  border-radius: 10px;
 }
 
 /* Phần icon */
 .featureProduct-container .featureProduct-title .featureProduct-title-list a {
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    text-wrap: nowrap;
-    padding: 5px 12px;
-    font-size: 14px;
-    margin-left: 10px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  text-wrap: nowrap;
+  padding: 5px 12px;
+  font-size: 14px;
+  margin-left: 10px;
 }
 
 /* THÔNG TIN TỪNG SẢN PHẨM */
 
 /* nếu dùng slide thì bỏ phần  .featureProduct-container .featureProduct-list*/
-.featureProduct-container .featureProduct-list{
-    /* background-color: aqua; */
-    /* display: flex;
+.featureProduct-container .featureProduct-list {
+  /* background-color: aqua; */
+  /* display: flex;
     justify-content: space-between;
     width: 100%; */
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info{
-    display: flex;
-    flex-direction: column;
-    width: 19.5%;
-    height: 450px;
-    border-radius: 10px;
-    border: #f3f4f6 solid;
-    box-shadow: 3px 3px 0.05px gainsboro;
-    align-items: center;
-    margin-bottom: 10px;
-    justify-content: space-between;
+.featureProduct-container .featureProduct-list .featureProduct-list-info {
+  display: flex !important;
+  flex-direction: column;
+  width: 19.5%;
+  height: 450px;
+  border-radius: 10px;
+  border: #f3f4f6 solid;
+  box-shadow: 3px 3px 0.05px gainsboro;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .discount-percent{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-image:hover,
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  h3:hover,
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-price:hover {
+  cursor: pointer;
+  color: #d70018;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .discount-percent p:nth-child(1){
-    background-color: red;
-    color: white;
-    font-weight: 900;
-    font-size: 12px;
-    text-align: center;
-    border: solid 2px;
-    border-radius: 5px;
-    padding: 2px 8px;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .discount-percent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .discount-percent p:nth-child(2){
-    color: rgb(96, 129, 177);
-    font-weight: 700;
-    font-size: 12px;
-    text-align: center;
-    border: solid 2px;
-    border-radius: 5px;
-    padding: 2px 8px;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .discount-percent
+  p:nth-child(1) {
+  background-color: red;
+  color: white;
+  font-weight: 900;
+  font-size: 12px;
+  text-align: center;
+  border: solid 2px;
+  border-radius: 5px;
+  padding: 2px 8px;
 }
 
-
-
-
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: aqua; */
-    height: 205px;
-    width: 177px;
-    object-fit: fill;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .discount-percent
+  p:nth-child(2) {
+  color: rgb(96, 129, 177);
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  border: solid 2px;
+  border-radius: 5px;
+  padding: 2px 8px;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-image img{
-    width: 100%;
-    height: auto;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+  height: 205px;
+  width: 177px;
+  object-fit: fill;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info h3{
-    width: 90%;
-    height: 60px;
-    font-size: 14px;
-    margin-bottom: 10px;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-image
+  img {
+  width: 100%;
+  height: auto;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-price{
-    display: flex;
-    width: 90%;
-    text-align: left;
-    align-items: flex-end;
+.featureProduct-container .featureProduct-list .featureProduct-list-info h3 {
+  width: 90%;
+  height: 60px;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-price p:nth-child(1){
-    color:#D70018;
-    font-size: 16px;
-    font-weight: 700;
-    margin-right: 5px;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-price {
+  display: flex;
+  width: 90%;
+  text-align: left;
+  align-items: flex-end;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-price p:nth-child(2){
-    color: rgb(141, 141, 141);
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: line-through;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-price
+  p:nth-child(1) {
+  color: #d70018;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 5px;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-member{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    justify-content: flex-start;
-    font-size: 12px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-price
+  p:nth-child(2) {
+  color: rgb(141, 141, 141);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: line-through;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-member p:nth-child(2){
-    margin-top: 10px;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-member {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: flex-start;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-member span{
-    font-size: 14px;
-    color:#D70018;
-    font-weight: bold;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-member
+  p:nth-child(2) {
+  margin-top: 10px;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-promotion{
-    display: flex;
-    width: 90%;
-    justify-content: flex-start;
-    font-size: 12px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: rgb(243, 244, 246);
-    border-radius: 5px;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-member
+  span {
+  font-size: 14px;
+  color: #d70018;
+  font-weight: bold;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-promotion .p {
-    text-align: justify;
-    padding: 5px 5px 10px 2px;
-    font-size: 12px;
-    line-height: 18px;
-    height: 44px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-promotion {
+  display: flex;
+  width: 90%;
+  justify-content: flex-start;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: rgb(243, 244, 246);
+  border-radius: 5px;
 }
 
-
-
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-rating{
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-    font-size: 12px;
-    padding-bottom:10px;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-promotion
+  .p {
+  text-align: justify;
+  padding: 5px 5px 10px 2px;
+  font-size: 12px;
+  line-height: 18px;
+  height: 44px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-rating div {
-    display: flex;
-    width: 35%;
-    justify-content: space-between;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-rating {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  font-size: 12px;
+  padding-bottom: 10px;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-rating div:nth-child(1)>svg{
-    color: #f49e0b;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-rating
+  div {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
 }
 
-.featureProduct-container .featureProduct-list .featureProduct-list-info .product-rating div:nth-child(2)>svg{
-    color:#D70018;
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-rating
+  div:nth-child(1)
+  > svg {
+  color: #f49e0b;
+}
+
+.featureProduct-container
+  .featureProduct-list
+  .featureProduct-list-info
+  .product-rating
+  div:nth-child(2)
+  > svg {
+  color: #d70018;
 }
 
 /* CSS cho thẻ phụ kiện và các thẻ chứa icon */
-.featureProduct-container .imageProduct-list{
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 5px;
-    column-gap: 5px;
-    width: 100%;
-    justify-content: flex-start;
+.featureProduct-container .imageProduct-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  column-gap: 5px;
+  width: 100%;
+  justify-content: flex-start;
 }
 
-.featureProduct-container .imageProduct-list .imageProduct-list-detail{
-    position: relative;
-    width: 10.5%;
+.featureProduct-container .imageProduct-list .imageProduct-list-detail {
+  position: relative;
+  width: 10.5%;
 }
 
-.featureProduct-container .imageProduct-list .imageProduct-list-detail a{
-    text-decoration: none;
-    font-size: 14px;
-    color: #ffff;
-    /* color: black; */
-    text-align: left;
+.featureProduct-container .imageProduct-list .imageProduct-list-detail a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffff;
+  /* color: black; */
+  text-align: left;
 }
 
-.featureProduct-container .imageProduct-list .imageProduct-list-detail a img{
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(214, 63, 68);
+.featureProduct-container .imageProduct-list .imageProduct-list-detail a img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(214, 63, 68);
 }
 
-.featureProduct-container .imageProduct-list .imageProduct-list-detail a span{
-    font-size: 14px;
-    position: absolute;
-    font-weight: bold;
-    left: 5px;
-    top: 5px;
+.featureProduct-container .imageProduct-list .imageProduct-list-detail a span {
+  font-size: 14px;
+  position: absolute;
+  font-weight: bold;
+  left: 5px;
+  top: 5px;
+}
+
+/* THÔNG TIN ƯU ĐÃI SINH VIÊN */
+/* .featureProduct-container .studentPromotion-list {
+  display: flex;
+  align-content: space-between;
+} */
+
+.featureProduct-container .studentPromotion-list .studentPromotion-detail {
+  display: flex !important;
+  flex-direction: column;
+  width: 24%;
+  height: 130px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.featureProduct-container .studentPromotion-list .studentPromotion-detail img {
+  height: 100%;
+  width: 96%;
+  border-radius: 10px;
+  border: #f3f4f6 solid 0.5px;
+  box-shadow: 3px 3px 0.05px gainsboro;
+}
+
+/* TIN CÔNG NGHỆ */
+.featureProduct-container .technologyNews-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featureProduct-container .featureProduct-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.featureProduct-container .featureProduct-title a:hover {
+  text-decoration: underline;
+}
+
+.featureProduct-container .technologyNews-component .technologyNews-detail {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-items: center;
+  width: 24%;
+  border: #d0d1d4 solid 1px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.featureProduct-container .technologyNews-component .technologyNews-detail img {
+  padding: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.featureProduct-container .technologyNews-component .technologyNews-detail p {
+  text-align: justify;
+  padding: 10px 10px 10px 8px;
+  font-weight: bold;
+  /* Hiển thị dấu ... trên 2 dòng */
+  display: block;
+  display: -webkit-box;
+  line-height: 1.5;
+  max-height: 59px;
+  max-width: 300px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  visibility: visible;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* tạo hiệu ứng zoom khi hover */
+.featureProduct-container
+  .technologyNews-component
+  .technologyNews-detail:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+  cursor: pointer;
 }

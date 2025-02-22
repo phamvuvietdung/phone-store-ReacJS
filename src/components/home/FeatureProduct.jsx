@@ -7,7 +7,11 @@ import {
   productPhoneInfo,
   productLaptopInfo,
   imgProductList,
+  studentPromotion,
+  technologyNews,
 } from "../../datas/featureProduct";
+
+import { useNavigate } from "react-router-dom";
 
 // THÊM slider từ THƯ VIỆN react-slick để làm slidebar
 import Slider from "react-slick";
@@ -27,7 +31,27 @@ var sliderSettings = {
   slidesToScroll: 1,
 };
 
+var sliderSettings4Slide = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+  arrows: false,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+};
+
 function FeatureProduct() {
+  const navigate = useNavigate();
+
+  const handleDetails = (product, id) => {
+    // console.log("product---", product);
+    // console.log("id---", id);
+    navigate(`/${product}/${id}`);
+  };
+
   return (
     <>
       {/* Điện thoại */}
@@ -79,9 +103,15 @@ function FeatureProduct() {
 
         <div className="featureProduct-list">
           <Slider {...sliderSettings}>
-            {productPhoneInfo.map((productInfo, index) => {
+            {productPhoneInfo.map((productInfo) => {
               return (
-                <div className="featureProduct-list-info" key={index}>
+                <div
+                  className="featureProduct-list-info"
+                  key={productInfo.id}
+                  onClick={() =>
+                    handleDetails("Dien-Thoai", productInfo.productLink)
+                  }
+                >
                   <div className="discount-percent">
                     {productInfo.discount[1] ? (
                       <p>{productInfo.discount[0]}</p>
@@ -185,9 +215,15 @@ function FeatureProduct() {
 
         <div className="featureProduct-list">
           <Slider {...sliderSettings}>
-            {productLaptopInfo.map((productInfo, index) => {
+            {productLaptopInfo.map((productInfo) => {
               return (
-                <div className="featureProduct-list-info" key={index}>
+                <div
+                  className="featureProduct-list-info"
+                  key={productInfo.id}
+                  onClick={() =>
+                    handleDetails("Laptop", productInfo.productLink)
+                  }
+                >
                   <div className="discount-percent">
                     {productInfo.discount[1] ? (
                       <p>{productInfo.discount[0]}</p>
@@ -270,6 +306,46 @@ function FeatureProduct() {
           </div>
         );
       })}
+
+      {/* thẻ ưu đãi sinh viên */}
+      <div className="featureProduct-container">
+        <div className="featureProduct-title">
+          <h2>ƯU ĐÃI SINH VIÊN</h2>
+        </div>
+
+        <div className="studentPromotion-list">
+          <Slider {...sliderSettings4Slide}>
+            {studentPromotion.map((imgLink, index) => {
+              return (
+                <div className="studentPromotion-detail" key={index}>
+                  <img src={imgLink.imgLink} alt="anh-uu-dai-sinh-vien" />
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+      </div>
+
+      {/* TIN CÔNG NGHỆ */}
+      <div className="featureProduct-container">
+        <div className="featureProduct-title">
+          <h2>TIN CÔNG NGHỆ</h2>
+          <p>
+            <a href="">Xem tất cả</a>
+          </p>
+        </div>
+
+        <div className="technologyNews-component">
+          {technologyNews.map((news, index) => {
+            return (
+              <div className="technologyNews-detail" key={index}>
+                <img src={news.newsImage} alt="anh-tin-cong-nghe" />
+                <p>{news.newsTitle}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 }
